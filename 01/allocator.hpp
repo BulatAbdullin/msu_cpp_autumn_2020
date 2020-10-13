@@ -26,6 +26,11 @@ public:
 	{
 		return ptr_current;
 	}
+
+	inline size_t getMaxSize() const
+	{
+		return max_size;
+	}
 };
 
 #endif
