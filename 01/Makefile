@@ -1,13 +1,12 @@
 CXX=g++
 CXXFLAGS=-Wall -Wpedantic -std=c++17
+SRCMODULES=allocator.cpp unit_tests.cpp
+OBJMODULES=$(SRCMODULES:.cpp=.o)
 
-all: test
+all: run_tests
 
 test: run_tests
 	./run_tests
-
-SRCMODULES=allocator.cpp
-OBJMODULES=$(SRCMODULES:.cpp=.o)
 
 run_tests: run_tests.cpp $(OBJMODULES)
 	$(CXX) $(CXXFLAGS) $^ -o $@
