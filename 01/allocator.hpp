@@ -16,6 +16,16 @@ public:
 	void makeAllocator(size_t max_size);
 	char *alloc(size_t size);
 	void reset();
+
+	inline char *getPtrStart() const
+	{
+		return ptr_start;
+	}
+
+	inline char *getPtrCurrent() const
+	{
+		return ptr_current;
+	}
 };
 
 #endif
