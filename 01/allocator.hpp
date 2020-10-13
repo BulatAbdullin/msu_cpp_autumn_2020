@@ -1,3 +1,6 @@
+#ifndef ALLOCATOR_H
+#define ALLOCATOR_H
+
 #include <stddef.h>
 
 class Allocator
@@ -14,3 +17,5 @@ public:
 	char *alloc(size_t size);
 	void reset();
 };
+
+#endif
