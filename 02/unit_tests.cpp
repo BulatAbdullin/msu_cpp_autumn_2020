@@ -40,7 +40,14 @@ void token_print()
 	puts(text);
 	parser.parse();
 	puts("");
+
 	text = "   aa 12a1 -1 23 2222    g  ";
+	puts(text);
+	parser.setText(text);
+	parser.parse();
+	puts("");
+
+	text = " \t ";
 	puts(text);
 	parser.setText(text);
 	parser.parse();
