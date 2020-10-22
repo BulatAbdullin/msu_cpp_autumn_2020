@@ -1,9 +1,12 @@
 #include <stdio.h>
+#include <assert.h>
+
 #include "unit_tests.cpp"
 
 int main()
 {
 	trivial();
-	token_print();
+	assert(started && ended);
+	test();
 	return 0;
 }
