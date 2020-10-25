@@ -32,17 +32,14 @@ bool Matrix::operator==(const Matrix& another_matrix) const
 			|| num_columns != another_matrix.num_columns) {
 		return false;
 	}
-	bool are_equal = true;
 	for (int i = 0; i < num_rows; i++) {
 		for (int j = 0; j < num_columns; j++) {
 			if (this->getElement(i, j) != another_matrix.getElement(i, j)) {
-				are_equal = false;
-				goto endfor;
+				return false;
 			}
 		}
 	}
-endfor:
-	return are_equal;
+	return true;
 }
 
 bool Matrix::operator!=(const Matrix& another_matrix) const
